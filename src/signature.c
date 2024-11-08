@@ -1133,7 +1133,7 @@ static void debug_cms_ci(CMS_ContentInfo *cms)
 	gchar *out_str = NULL;
 	long size;
 
-	if ((domains == NULL) || (strstr(domains, G_LOG_DOMAIN "-signature") == NULL)) {
+	if ((domains == NULL) || (strstr(domains, G_LOG_DOMAIN "all") != NULL) || (strstr(domains, G_LOG_DOMAIN "-signature") == NULL)) {
 		return;
 	}
 
